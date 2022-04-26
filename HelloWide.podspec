@@ -15,9 +15,9 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
   
-  spec.name         = "HelloWideSDK"
+  spec.name         = "HelloWide"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of HelloWideSDK."
+  spec.summary      = "A short description of HelloWide."
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,9 +25,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
+  TODO: Add long description of the pod here.
                    DESC
 
-  spec.homepage     = "https://github.com/ardywijaya/HelloWideSDK-iOS.git"
+  spec.homepage     = "https://github.com/ardywijaya/HelloWide.git"
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.author             = { "Ardy Wijaya" => "ardy.wijaya@primecash.co.id" }
   spec.source = { :http => 'https://github.com/ardywijaya/HelloWideSDK/raw/main/HelloWideSDK.xcframework.zip' }
@@ -35,6 +36,8 @@ Pod::Spec.new do |spec|
   spec.ios.deployment_target = "12.0"
   spec.requires_arc = true
   spec.vendored_frameworks = "HelloWideSDK.xcframework"
+  spec.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  spec.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
   # spec.framework  = "SomeFramework"
   # spec.frameworks = "SomeFramework", "AnotherFramework"
   # spec.dependency "JSONKit", "~> 1.4"
