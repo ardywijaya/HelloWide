@@ -1,2 +1,2 @@
-# HelloWideSDK-iOS
-HelloWideSDK for iOS
+# HelloWide
+Implementation of HelloWideSDK
